@@ -10,7 +10,7 @@
     font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimSun", serif;
     background:#FAFAF8; color:#2b2b2b; line-height:1.8;
   }
-  .num, h1, h2, .digit { font-family:"Times New Roman", "Kaiti SC", "STKaiti", serif; }
+  h1, h2 { font-family:"Times New Roman", "Kaiti SC", "STKaiti", serif; }
   header {
     background:#A6192E; color:#fff; padding:34px 20px 30px;
   }
@@ -18,15 +18,7 @@
     font-size:13px; letter-spacing:4px; opacity:.85; margin-bottom:10px;
   }
   header h1 { font-size:24px; font-weight:bold; letter-spacing:1px; }
-  header p { font-size:14px; margin-top:10px; opacity:.92; }
-  .wrap { max-width:720px; margin:0 auto; padding:22px 16px 40px; }
-  .idea {
-    background:#fff; border-left:4px solid #A6192E; border-radius:6px;
-    padding:16px 18px; margin-bottom:26px;
-    box-shadow:0 1px 4px rgba(0,0,0,.06);
-    font-size:16px;
-  }
-  .idea b { color:#A6192E; }
+  .wrap { max-width:720px; margin:0 auto; padding:26px 16px 40px; }
   h2 {
     font-size:18px; color:#A6192E; margin:26px 0 12px;
     display:flex; align-items:center; gap:10px;
@@ -37,6 +29,7 @@
     background:#A6192E; color:#fff; font-size:15px; flex:none;
     font-family:"Times New Roman", serif;
   }
+  h2:first-of-type { margin-top:0; }
   .card {
     background:#fff; border:1px solid #E8E2D8; border-radius:8px;
     padding:16px 18px; margin-bottom:12px;
@@ -55,40 +48,12 @@
     font-family:"Kaiti SC","KaiTi",serif;
   }
   .copy-btn.ok { background:#3C7A3C; }
-  table {
-    width:100%; border-collapse:collapse; background:#fff;
-    font-size:14.5px; border-radius:8px; overflow:hidden;
-    box-shadow:0 1px 3px rgba(0,0,0,.05);
-  }
-  th { background:#A6192E; color:#fff; padding:10px 12px; text-align:left; font-weight:normal; }
-  td { padding:10px 12px; border-bottom:1px solid #F0EAE0; vertical-align:top; }
-  tr:last-child td { border-bottom:none; }
-  .key {
-    display:inline-block; background:#F3EDE2; border:1px solid #D8C9A8;
-    border-radius:4px; padding:0 6px; font-size:13.5px;
-    font-family:"Times New Roman","Kaiti SC",serif;
-  }
-  .check { list-style:none; }
-  .check li {
-    background:#fff; border:1px solid #E8E2D8; border-radius:8px;
-    padding:11px 14px 11px 40px; margin-bottom:8px; position:relative;
-    font-size:15.5px;
-  }
-  .check li::before {
-    content:"✓"; position:absolute; left:14px; top:10px;
-    color:#A6192E; font-weight:bold; font-size:16px;
-  }
-  .check .warn { color:#A6192E; font-weight:bold; }
   .apps { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
   .app {
     background:#fff; border:1px solid #E8E2D8; border-radius:8px;
     padding:12px 14px; font-size:14.5px;
   }
   .app b { color:#A6192E; display:block; margin-bottom:3px; font-size:15px; }
-  .final {
-    background:#A6192E; color:#fff; border-radius:8px;
-    padding:18px 20px; margin-top:26px; font-size:16px; text-align:center;
-  }
   @media (max-width:420px){ .apps{ grid-template-columns:1fr; } }
 </style>
 </head>
@@ -97,15 +62,9 @@
 <header>
   <div class="top">效率工具 · 经验分享</div>
   <h1>用AI整理会议记录 · 操作小Tips</h1>
-  <p>手里有 Excel 列表 + 去年 Word 模板，半小时的活 5 分钟干完</p>
 </header>
 
 <div class="wrap">
-
-  <div class="idea">
-    <b>核心思路：AI 管"写"，你管"改"。</b><br>
-    第一步让 AI 起草内容，第二步你在去年的模板上手动替换。格式全自动保留，不用重新排版。
-  </div>
 
   <h2><span class="badge">1</span>让 AI 写内容</h2>
   <div class="card">
@@ -123,33 +82,7 @@
     </div>
   </div>
 
-  <h2><span class="badge">2</span>在去年的模板上手动改</h2>
-  <div class="card" style="margin-bottom:10px;">
-    <b style="color:#A6192E;">不要新建文档。</b>复制一份去年的记录重命名，在里面改——红头、字体、行距全自动保留：
-  </div>
-  <table>
-    <tr><th style="width:38%;">要改的地方</th><th>怎么改</th></tr>
-    <tr><td>文件名</td><td>复制去年文件 → 重命名把 2024 改成 2026</td></tr>
-    <tr><td>红头里的期次</td><td>双击页眉区域 → 把 [2024]第4次 改成 [2026]第4次</td></tr>
-    <tr><td>时间地点主持出席</td><td>照 Excel 直接打字替换</td></tr>
-    <tr><td>正文</td><td>全选旧正文删除 → 粘贴 AI 写好的内容</td></tr>
-  </table>
-  <div class="card" style="margin-top:12px;">
-    <b style="color:#A6192E;">两个保命技巧：</b><br>
-    ① 粘贴时选<b>「只保留文本」</b>（右键 → 粘贴选项，或快捷键 <span class="key">Ctrl+Shift+V</span>），文字自动套用模板原有字体行距，不带进聊天框的格式<br>
-    ② 某段格式不对？选中一段正常文字 → 点<b>「格式刷」</b> → 刷过去
-  </div>
-
-  <h2><span class="badge">3</span>核对清单（每份1分钟）</h2>
-  <ul class="check">
-    <li><span class="warn">页眉期次</span>改了（最容易漏！）</li>
-    <li>日期和星期几对得上（手机日历查一下）</li>
-    <li>主持人 = Excel 里的「授课人员」</li>
-    <li>出席人员和 Excel 名单逐字一致</li>
-    <li>人名没写错（AI 偶尔会写错字，扫一遍）</li>
-  </ul>
-
-  <h2><span class="badge">4</span>各平台小提示</h2>
+  <h2><span class="badge">2</span>各平台小提示</h2>
   <div class="apps">
     <div class="app"><b>豆包</b>直接拖 Excel 进去，让它"读出第4次的内容"再扩写</div>
     <div class="app"><b>通义千问</b>长文本粘贴稳定，适合贴大段简要记录</div>
@@ -158,11 +91,6 @@
   </div>
   <div class="card" style="margin-top:12px; font-size:14.5px; color:#7a6a55;">
     手机上都能用：微信里把 Excel 发给「文件传输助手」，再转发给 AI 小程序即可。
-  </div>
-
-  <div class="final">
-    一句话总结：AI 负责把简要记录扩写成正文，你负责在模板上替换 + 核对——<br>
-    一份记录从半小时缩到 5 分钟。
   </div>
 
 </div>
